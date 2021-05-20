@@ -8,6 +8,7 @@
 #  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
+from dataclasses import dataclass
 from typing import List, Optional, Set
 
 from jinja2 import Template
@@ -19,7 +20,7 @@ from sodasql.scan.scan_yml_column import ScanYmlColumn
 from sodasql.scan.sql_metric_yml import SqlMetricYml
 from sodasql.scan.test import Test
 
-
+@dataclass
 class ScanYml:
     table_name: str = None
     metrics: Set[str] = None
